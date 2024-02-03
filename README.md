@@ -33,8 +33,6 @@ npm i -D @benjamincharity/rehype-scroll-to-top
 
 ## Options
 
-Sure, here is a table outlining the available setting options for the `rehype-scroll-to-top` plugin:
-
 | Option                 | Type      | Description                         | Default              |
 | ---------------------- | --------- | ----------------------------------- | -------------------- |
 | `topLink.ariaLabel`    | `string`  | Aria label for the top link         | `"Scroll to bottom"` |
