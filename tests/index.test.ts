@@ -1,9 +1,9 @@
 import { expect, test } from "vitest";
-import { rehype } from "rehype";
 import { readSync } from "to-vfile";
 import rehypeMinifyWhitespace from "rehype-minify-whitespace";
 import rehypeScrollToTop, { type RehypeScrollToTopOptions } from "../src";
 import { toHtml } from "hast-util-to-html";
+import { rehype } from "rehype";
 
 const planeProcessor = rehype().data("settings", { fragment: true }).use(rehypeMinifyWhitespace);
 
@@ -13,7 +13,7 @@ const run = (name: string, options: boolean | Partial<RehypeScrollToTopOptions> 
     .use(rehypeScrollToTop, options)
     .use(rehypeMinifyWhitespace);
 
-  const input = toHtml(processor.runSync(planeProcessor.parse(readSync(`./tests/fixtures/${name}/input.html`))));
+  const input = toHtml(processor.runSync(planeProcessor.parse(readSync(`./tests/fixtures/${name}/input.html`))) as any);
 
   const output = toHtml(
     planeProcessor.runSync(planeProcessor.parse(readSync(`./tests/fixtures/${name}/output.html`))) as any
