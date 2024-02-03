@@ -18,16 +18,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 8
       - name: Run install
-        run: npm ci
+        run: pnpm i
       - name: Run lint
-        run: npm run lint
+        run: pnpm run lint
       - name: Run unit tests
-        run: npm test
+        run: pnpm test
       - name: Run build
-        run: npm run build
+        run: pnpm run build
       - name: Generate coverage file
-        run: npm run coverage
+        run: pnpm run coverage
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         with:
