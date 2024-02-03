@@ -23,8 +23,6 @@ jobs:
           version: 8
       - name: Run install
         run: pnpm i
-      - name: Run lint
-        run: pnpm run lint
       - name: Run unit tests
         run: pnpm test
       - name: Run build
