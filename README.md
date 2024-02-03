@@ -25,6 +25,18 @@ unified()
   .use(rehypeParse, {fragment: true})
   .use(rehypeScrollToTop)
   .process('<h1>Title</h1><p>Content</p>')
+
+// Or with options:
+unified()
+  .use(rehypeParse, {fragment: true})
+  .use(rehypeScrollToTop, {
+    topLink: { disabled: true },
+    bottomLink: {
+      text: `Back to top ↑`,
+      classes: 'animated-link-underline',
+    },
+  })
+  .process('<h1>Title</h1><p>Content</p>')
 ```
 
 ### Input
