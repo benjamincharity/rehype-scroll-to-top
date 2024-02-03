@@ -10,7 +10,7 @@ I needed an easy way for users to jump to the top of the page or the bottom.
 ## Install
 
 ```
-npm i -D @benjamincharity/rehype-scroll-to-top
+npm i -D @benjc/rehype-scroll-to-top
 ```
 
 ## Sample
