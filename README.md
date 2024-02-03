@@ -5,7 +5,7 @@
 
 ## Motivation
 
-I needed an easy way for users to jump to the top of the page or the bottom.
+Allow users to easily scroll to the top or bottom of a page by adding links to the top and bottom of the page.
 
 ## Install
 
@@ -13,7 +13,19 @@ I needed an easy way for users to jump to the top of the page or the bottom.
 npm i -D @benjc/rehype-scroll-to-top
 ```
 
-## Sample
+## Usage
+
+```typescript
+import rehype from "rehype";
+import rehypeParse from 'rehype-parse';
+import rehypeScrollToTop from "@benjc/rehype-scroll-to-top";
+import { unified } from 'unified';
+
+unified()
+  .use(rehypeParse, {fragment: true})
+  .use(rehypeScrollToTop)
+  .process('<h1>Title</h1><p>Content</p>')
+```
 
 ### Input
 
