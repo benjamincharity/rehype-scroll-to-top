@@ -74,7 +74,7 @@ const createLinkElement = (props: RehypeScrollToLink & { destinationId: string }
   };
 };
 
-const rehypeScrollToTop: Plugin<[Partial<RehypeScrollToTopOptions>], Root> = (options = {}) => {
+const rehypeScrollToTop: Plugin<[Partial<RehypeScrollToTopOptions>?], Root> = (options = {}) => {
   const opts = mergeOptions(options);
 
   return (tree) => {
