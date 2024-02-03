@@ -49,10 +49,14 @@ unified()
 ### Output
 
 ```html
-<a aria-label="Scroll to bottom" href="#bottom" id="top" class="scroll-to scroll-to--top">Scroll to bottom</a>
+<div class="scroll-to-wrapper">
+  <a aria-label="Scroll to bottom" href="#bottom" id="top" class="scroll-to scroll-to--top">Scroll to bottom</a>
+</div>
 <h1>Title</h1>
 <p>Content</p>
-<a aria-label="Scroll to top" href="#top" id="bottom" class="scroll-to scroll-to--bottom">Scroll to top</a>
+<div class="scroll-to-wrapper">
+  <a aria-label="Scroll to top" href="#top" id="bottom" class="scroll-to scroll-to--bottom">Scroll to top</a>
+</div>
 ```
 
 ## Options
