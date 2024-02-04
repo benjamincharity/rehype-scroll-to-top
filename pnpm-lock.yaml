@@ -14,7 +14,7 @@ dependencies:
 
 devDependencies:
   '@trivago/prettier-plugin-sort-imports':
-    specifier: 4.3.0
+    specifier: ^4.3.0
     version: 4.3.0(prettier@3.2.4)
   '@types/hast':
     specifier: ^3.0.4
@@ -44,10 +44,10 @@ devDependencies:
     specifier: ^8.0.0
     version: 8.0.0
   type-coverage:
-    specifier: 2.27.1
+    specifier: ^2.27.1
     version: 2.27.1(typescript@5.3.3)
   typecov:
-    specifier: 0.2.3
+    specifier: ~0.2.3
     version: 0.2.3(@codechecks/client@0.1.12)(typescript@5.3.3)
   typescript:
     specifier: ^5.3.3
@@ -59,7 +59,7 @@ devDependencies:
     specifier: ^1.2.2
     version: 1.2.2(@types/node@20.11.16)
   xo:
-    specifier: 0.56.0
+    specifier: ~0.56.0
     version: 0.56.0(webpack@5.90.1)
 
 packages:
