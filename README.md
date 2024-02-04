@@ -16,27 +16,24 @@ npm i -D @benjc/rehype-scroll-to-top
 ## Usage
 
 ```typescript
-import rehype from "rehype";
-import rehypeParse from 'rehype-parse';
 import rehypeScrollToTop from "@benjc/rehype-scroll-to-top";
-import { unified } from 'unified';
+import rehype from "rehype";
+import rehypeParse from "rehype-parse";
+import { unified } from "unified";
 
-unified()
-  .use(rehypeParse, {fragment: true})
-  .use(rehypeScrollToTop)
-  .process('<h1>Title</h1><p>Content</p>')
+unified().use(rehypeParse, { fragment: true }).use(rehypeScrollToTop).process("<h1>Title</h1><p>Content</p>");
 
 // Or with options:
 unified()
-  .use(rehypeParse, {fragment: true})
+  .use(rehypeParse, { fragment: true })
   .use(rehypeScrollToTop, {
     topLink: { disabled: true },
     bottomLink: {
       text: `Back to top ↑`,
-      classes: 'animated-link-underline',
+      classes: "animated-link-underline",
     },
   })
-  .process('<h1>Title</h1><p>Content</p>')
+  .process("<h1>Title</h1><p>Content</p>");
 ```
 
 ### Input
