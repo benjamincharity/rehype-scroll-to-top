@@ -40,7 +40,7 @@ const baseClass = "scroll-to";
 const bottomClass = "scroll-to--bottom";
 const topClass = "scroll-to--top";
 
-const rehypeScrollToTop: Plugin<[RehypeScrollToTopOptions?], Root> = (options = {}) => {
+export const rehypeScrollToTop: Plugin<[RehypeScrollToTopOptions?], Root> = (options = {}) => {
   const options_ = mergeOptions(options);
 
   return (tree) => {

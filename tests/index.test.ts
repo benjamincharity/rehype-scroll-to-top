@@ -5,7 +5,8 @@ import rehypeMinifyWhitespace from "rehype-minify-whitespace";
 import { readSync } from "to-vfile";
 import { expect, test } from "vitest";
 
-import rehypeScrollToTop, { type RehypeScrollToTopOptions } from "../src/index.ts";
+import { rehypeScrollToTop } from "../src/index.js";
+import type { RehypeScrollToTopOptions } from "../src/index.js";
 
 const planeProcessor = rehype().data("settings", { fragment: true }).use(rehypeMinifyWhitespace);
 
