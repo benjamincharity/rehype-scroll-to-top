@@ -1,5 +1,5 @@
-import { Plugin } from "unified";
-import { Element, Root } from "hast";
+import { type Element, type Root } from "hast";
+import { type Plugin } from "unified";
 
 export type RehypeScrollToLink = {
   ariaLabel: string;
@@ -41,11 +41,11 @@ const bottomClass = "scroll-to--bottom";
 const topClass = "scroll-to--top";
 
 const rehypeScrollToTop: Plugin<[RehypeScrollToTopOptions?], Root> = (options = {}) => {
-  const opts = mergeOptions(options);
+  const options_ = mergeOptions(options);
 
   return (tree) => {
     const newChildren = [];
-    const { topLink, bottomLink } = opts;
+    const { topLink, bottomLink } = options_;
     if (!topLink.disabled) {
       const { ariaLabel, id, text, classes, disabled } = topLink;
       const topLinkElement = createLinkElement({
@@ -86,11 +86,11 @@ function mergeOptions(userOptions: Partial<RehypeScrollToTopOptions> = {}): Rehy
   return {
     bottomLink: {
       ...defaultOptions.bottomLink,
-      ...userOptions.bottomLink
+      ...userOptions.bottomLink,
     },
     topLink: {
       ...defaultOptions.topLink,
-      ...userOptions.topLink
+      ...userOptions.topLink,
     },
   };
 }
@@ -102,9 +102,9 @@ function createLinkElement(props: RehypeScrollToLink & { destinationId: string }
     tagName: "a",
     properties: {
       "aria-label": ariaLabel,
-      href: `#${destinationId}`,
+      "href": `#${destinationId}`,
       id,
-      className: [classes],
+      "className": [classes],
     },
     children: [{ type: "text", value: text }],
   };
