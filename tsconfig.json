@@ -1,16 +1,17 @@
 {
   "compilerOptions": {
-    "allowImportingTsExtensions": true,
     "declaration": true,
     "declarationMap": true,
+    "emitDeclarationOnly": false,
     "esModuleInterop": true,
     "lib": ["ESNext"],
     "module": "nodeNext",
     "moduleResolution": "nodeNext",
     "outDir": "dist",
-    "strict": true,
     "target": "ESNext",
     "types": ["node"],
+    "forceConsistentCasingInFileNames": true,
+    "strict": true
   },
   "include": ["src"],
 }
