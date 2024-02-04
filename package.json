@@ -6,12 +6,15 @@
   "main": "dist/index.js",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "tsc",
     "test": "vitest",
     "coverage": "vitest run --coverage",
+    "coverage:types": "type-coverage --min=100",
     "typecheck": "tsc --noEmit",
     "format": "prettier --write ."
   },
@@ -39,6 +42,8 @@
     "rehype-minify-whitespace": "^6.0.0",
     "rimraf": "^5.0.5",
     "to-vfile": "^8.0.0",
+    "type-coverage": "2.27.1",
+    "typecov": "0.2.3",
     "typescript": "^5.3.3",
     "vite": "^5.0.12",
     "vitest": "^1.2.2"
