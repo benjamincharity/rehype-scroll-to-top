@@ -28,6 +28,9 @@ jobs:
       - name: Run install
         run: pnpm i
 
+      - name: Run lint
+        run: pnpm lint
+
       - name: Run unit tests
         run: pnpm test
 
