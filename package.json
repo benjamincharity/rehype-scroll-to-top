@@ -1,6 +1,6 @@
 {
   "name": "@benjc/rehype-scroll-to-top",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "A Rehype plugin that adds a 'scroll to top' & 'scroll to bottom' links to the page.",
   "type": "module",
   "main": "dist/index.js",
