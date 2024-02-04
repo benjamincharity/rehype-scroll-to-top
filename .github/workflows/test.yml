@@ -12,23 +12,31 @@ jobs:
     strategy:
       matrix:
         node-version: [18.x, 20.x]
+
     steps:
       - uses: actions/checkout@v4
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
+
       - uses: pnpm/action-setup@v2
         with:
           version: 8
+
       - name: Run install
         run: pnpm i
+
       - name: Run unit tests
         run: pnpm test
+
       - name: Run build
         run: pnpm run build
+
       - name: Generate coverage file
         run: pnpm run coverage
+
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4
         env:
