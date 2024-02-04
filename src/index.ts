@@ -85,18 +85,12 @@ export default rehypeScrollToTop;
 function mergeOptions(userOptions: Partial<RehypeScrollToTopOptions> = {}): RehypeScrollToTopOptionsRequired {
   return {
     bottomLink: {
-      ariaLabel: userOptions.bottomLink?.ariaLabel ?? defaultOptions.bottomLink.ariaLabel,
-      classes: userOptions.bottomLink?.classes ?? defaultOptions.bottomLink.classes,
-      disabled: userOptions.bottomLink?.disabled ?? defaultOptions.bottomLink.disabled,
-      id: userOptions.bottomLink?.id ?? defaultOptions.bottomLink.id,
-      text: userOptions.bottomLink?.text ?? defaultOptions.bottomLink.text,
+      ...defaultOptions.bottomLink,
+      ...userOptions.bottomLink
     },
     topLink: {
-      ariaLabel: userOptions.topLink?.ariaLabel ?? defaultOptions.topLink.ariaLabel,
-      classes: userOptions.topLink?.classes ?? defaultOptions.topLink.classes,
-      disabled: userOptions.topLink?.disabled ?? defaultOptions.topLink.disabled,
-      id: userOptions.topLink?.id ?? defaultOptions.topLink.id,
-      text: userOptions.topLink?.text ?? defaultOptions.topLink.text,
+      ...defaultOptions.topLink,
+      ...userOptions.topLink
     },
   };
 }
