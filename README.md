@@ -2,6 +2,7 @@
 
 ![test workflow](https://github.com/benjamincharity/rehype-scroll-to-top/actions/workflows/test.yml/badge.svg)
 [![codecov](https://codecov.io/gh/benjamincharity/rehype-scroll-to-top/branch/main/graph/badge.svg?token=T3Z18P56LV)](https://codecov.io/gh/benjamincharity/rehype-scroll-to-top)
+![NPM Version](https://img.shields.io/npm/v/@benjc/rehype-scroll-to-top)
 
 ## Motivation
 
